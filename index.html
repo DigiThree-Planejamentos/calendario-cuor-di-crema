@@ -217,7 +217,7 @@
 <div class="toolbar">
   <span class="toolbar-label">Ações:</span>
   <button class="btn btn-cyan" onclick="window.print()">🖨 Imprimir</button>
-  <button class="btn btn-ghost" onclick="exportHTML()">💾 Salvar HTML</button>
+  <button class="btn btn-cyan" onclick="salvarAlteracoes()">💾 Salvar alterações</button>
   <button class="btn btn-ghost" id="editModeBtn" onclick="toggleEditMode()">✏️ Modo Edição</button>
   <button class="btn btn-ghost" onclick="openDatasModal()">🗓 Datas Comemorativas</button>
   <div class="month-nav" id="monthNav"><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn active" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
@@ -1468,6 +1468,20 @@ const observer = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.15});
 document.querySelectorAll('.month-block').forEach(el=>observer.observe(el));
+  
+function salvarAlteracoes() {
+  localStorage.setItem('calendario_salvo', document.body.innerHTML);
+  showToast('Alterações salvas com sucesso!');
+}
+
+function carregarAlteracoes() {
+  const dados = localStorage.getItem('calendario_salvo');
+  if (dados) {
+    document.body.innerHTML = dados;
+  }
+}
+
+window.addEventListener('load', carregarAlteracoes);
 </script><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;">
 
 
