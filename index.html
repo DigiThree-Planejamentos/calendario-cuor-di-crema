@@ -1451,27 +1451,14 @@ function exportHTML(){
 
 
 function inferGitHubPagesConfig(){
-  const host = window.location.hostname || '';
-  const rawPath = window.location.pathname || '/';
-  const owner = host.replace(/\.github\.io$/i,'');
-  const cleanPath = rawPath.split('?')[0].split('#')[0];
-  const segments = cleanPath.replace(/^\/+|\/+$/g,'').split('/').filter(Boolean);
-
-  let repo = '';
-  let filePath = 'index.html';
-
-  if(owner){
-    const isUserOrOrgPage = segments.length === 0 || (segments.length === 1 && /^index\.html?$/i.test(segments[0]));
-
-    if(isUserOrOrgPage){
-      repo = `${owner}.github.io`;
-      filePath = segments.length ? segments[0] : 'index.html';
-    } else {
-      repo = segments[0];
-      const rest = segments.slice(1);
-      filePath = rest.length ? rest.join('/') : 'index.html';
-    }
-  }
+  return {
+    owner: "digithree-planejamentos",
+    repo: "calendario-cuor-di-crema", 
+    branch: "main",
+    path: "index.html",
+    token: ""
+  };
+}
 
   filePath = (filePath || 'index.html').replace(/^\/+/, '').replace(/\/+/g, '/');
   if(!/\.html?$/i.test(filePath)){
