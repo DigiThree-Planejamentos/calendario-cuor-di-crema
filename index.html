@@ -1466,7 +1466,11 @@ function loadGitHubPagesConfig(){
   const inferred = inferGitHubPagesConfig();
   try{
     const saved = JSON.parse(localStorage.getItem(GITHUB_CFG_KEY) || '{}');
-    return { ...inferred, ...saved, token: saved.token || '' };
+    return {
+      ...inferred,
+      branch: saved.branch || inferred.branch,
+      token: saved.token || ''
+    };
   }catch(_err){
     return inferred;
   }
@@ -1477,10 +1481,8 @@ function saveGitHubPagesConfig(cfg){
 }
 
 function resetGitHubToken(){
-  const cfg = loadGitHubPagesConfig();
-  cfg.token = '';
-  saveGitHubPagesConfig(cfg);
-  showToast('Token removido. No próximo salvamento ele será solicitado.');
+  localStorage.removeItem(GITHUB_CFG_KEY);
+  showToast('Configuração local removida. No próximo salvamento o token será solicitado novamente.');
 }
 
 async function ensureGitHubPagesConfig(){
