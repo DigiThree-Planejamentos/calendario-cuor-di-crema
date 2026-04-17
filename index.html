@@ -200,7 +200,7 @@
 <header class="site-header">
   <div class="header-brand">
     <h1><span contenteditable="true" id="hdrClient" style="outline:none;">Cuor di Crema Angra</span> · <em contenteditable="true" id="hdrYear" style="outline:none;">2026</em></h1>
-    <span class="sub" contenteditable="true" id="hdrSub" style="outline:none;">Calendário Editorial — Abril 2026 · @cuordicrema.angra</span>
+    <span class="sub" contenteditable="true" id="hdrSub" style="outline:none;">CALENDÁRIO EDITORIAL — ABRIL 2026 · @CUORDICREMA.ANGRA</span>
     <div class="edit-hint">✏ clique em qualquer texto para editar</div>
   </div>
   <div class="header-meta">
@@ -221,12 +221,12 @@
   <button class="btn btn-ghost" onclick="resetGitHubToken()">🔐 Token GitHub</button>
   <button class="btn btn-ghost" id="editModeBtn" onclick="toggleEditMode()">✏️ Modo Edição</button>
   <button class="btn btn-ghost" onclick="openDatasModal()">🗓 Datas Comemorativas</button>
-  <div class="month-nav" id="monthNav"><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn active" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
+  <div class="month-nav" id="monthNav"><button class="month-btn active" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
 </div>
 
 <div class="stats-bar">
-  <div class="stat-pill"><div class="num" style="color:var(--navy)" id="statTotal">8</div><div class="lbl">Total Posts</div></div>
-  <div class="stat-pill"><div class="num" style="color:var(--arte)" id="statArte">3</div><div class="lbl">Artes</div></div>
+  <div class="stat-pill"><div class="num" style="color:var(--navy)" id="statTotal">9</div><div class="lbl">Total Posts</div></div>
+  <div class="stat-pill"><div class="num" style="color:var(--arte)" id="statArte">4</div><div class="lbl">Artes</div></div>
   <div class="stat-pill"><div class="num" style="color:var(--foto)" id="statFoto">3</div><div class="lbl">Fotos</div></div>
   <div class="stat-pill"><div class="num" style="color:var(--story)" id="statStory">0</div><div class="lbl">Stories</div></div>
   <div class="stat-pill"><div class="num" style="color:var(--reels)" id="statReels">1</div><div class="lbl">Reels</div></div>
@@ -268,7 +268,19 @@
         <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões…" onchange="savePlanField(1,'observacoes',this.value)"></textarea>
       </div>
     </div>
-  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">🎆 Ano Novo</div><button class="add-post-btn" onclick="openModal(0,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(0,2,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(0,3,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(0,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(0,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><div class="special-label">🏖️ Feriado RJ</div><button class="add-post-btn" onclick="openModal(0,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(0,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(0,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(0,9,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(0,10,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(0,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(0,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(0,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(0,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(0,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(0,16,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(0,17,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(0,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(0,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(0,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(0,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(0,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(0,23,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(0,24,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(0,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(0,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(0,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(0,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(0,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(0,30,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(0,31,true)">＋ post</button></div></div></div></div></div><div class="month-block" id="month-1"><div class="month-header"><div class="month-title">Fevereiro <em>2026</em></div><div class="month-badge">Mês 2</div></div><div class="month-notes" contenteditable="true" data-month="2" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">🎆 Ano Novo</div><button class="add-post-btn" onclick="openModal(0,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(0,2,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(0,3,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div>
+            <div class="post-card arte" onclick="openModal(0,4)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(0,4)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(0,4)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(0,4)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎨 Arte</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(0,4,this.innerText)">teste</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(0,4)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(0,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><div class="special-label">🏖️ Feriado RJ</div><button class="add-post-btn" onclick="openModal(0,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(0,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(0,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(0,9,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(0,10,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(0,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(0,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(0,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(0,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(0,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(0,16,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(0,17,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(0,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(0,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(0,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(0,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(0,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(0,23,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(0,24,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(0,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(0,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(0,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(0,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(0,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(0,30,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(0,31,true)">＋ post</button></div></div></div></div></div><div class="month-block" id="month-1"><div class="month-header"><div class="month-title">Fevereiro <em>2026</em></div><div class="month-badge">Mês 2</div></div><div class="month-notes" contenteditable="true" data-month="2" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
     <div class="plan-header-row">
       <span class="plan-icon">📋</span>
       <span>Planejamento do Mês</span>
@@ -342,7 +354,7 @@
     <div class="plan-grid">
       <div class="plan-cell">
         <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
-        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(4,'objetivos',this.value)">Lançar a expedição Praia do Aventureiro (19/04) e consolidar presença digital com conteúdo aspiracional e de conversão.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(4,'objetivos',this.value)">Fortalecer presença digital da unidade de Angra dos Reis, apresentar o cardápio de gelatos artesanais, gerar desejo e engajamento com conteúdo sensorial e educativo.</textarea>
       </div>
       <div class="plan-cell">
         <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
@@ -358,85 +370,73 @@
       </div>
       <div class="plan-cell" style="border-right:none">
         <div class="plan-label"><span>👤</span> Persona do Mês</div>
-        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas…" onchange="savePlanField(4,'persona',this.value)">Turistas, moradores de Angra e região, casais, grupos de amigos que buscam passeios de lancha e experiências no mar.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas…" onchange="savePlanField(4,'persona',this.value)">Moradores de Angra dos Reis e região, turistas, famílias, casais e jovens que frequentam o Shopping Piratas e buscam sobremesas premium e experiências gastronômicas.</textarea>
       </div>
     </div>
     <div class="plan-grid-bottom">
       <div class="plan-cell-full">
         <div class="plan-label"><span>📝</span> Observações Gerais</div>
-        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões…" onchange="savePlanField(4,'observacoes',this.value)">Foco forte na expedição do dia 19/04 (4 posts dedicados). TBT pós-expedição no dia 23. Feriado de Tiradentes no dia 21.</textarea>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões…" onchange="savePlanField(4,'observacoes',this.value)">8 posts em abril (3 Artes, 3 Fotos, 1 Reels, 1 Carrossel). Foco em apresentar sabores, bastidores artesanais, gelato pet e criar desejo. Post do dia 17 marcado como ALTERAR. Reels do dia 23 precisa de captação. Carrossel do dia 27 e foto do dia 29 precisam ser feitos.</textarea>
       </div>
     </div>
   </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">🤥 Dia da Mentira</div><button class="add-post-btn" onclick="openModal(3,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><div class="special-label">🧩 Consciência do Autismo</div><button class="add-post-btn" onclick="openModal(3,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><div class="special-label">✝️ Sexta-Feira Santa</div><button class="add-post-btn" onclick="openModal(3,3,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(3,4,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="5"><div class="day-num">5</div><div class="special-label">🐣 Páscoa</div><button class="add-post-btn" onclick="openModal(3,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><div class="special-label">🙏 São Benedito</div><button class="add-post-btn" onclick="openModal(3,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><div class="special-label">🌍 Dia Mundial da Saúde</div><button class="add-post-btn" onclick="openModal(3,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><div class="special-label">🎗️ Combate ao Câncer</div><button class="add-post-btn" onclick="openModal(3,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(3,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div>
-            <div class="post-card carrossel" onclick="openModal(3,10)">
+            <div class="post-card foto" onclick="openModal(3,10)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,10)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,10)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,10)">🗑</button>
               </div>
-              <div class="post-type-tag">🖼 Carrossel</div>
+              <div class="post-type-tag">📸 Foto</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,10,this.innerText)">Expedição Praia do Aventureiro — Chamada</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,10,this.innerText)">Copinho que resolve qualquer dia</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,10)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(3,11,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(3,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><div class="special-label">💋 Dia do Beijo</div>
-            <div class="post-card reels" onclick="openModal(3,13)">
+            <div class="post-card arte" onclick="openModal(3,13)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,13)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,13)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,13)">🗑</button>
               </div>
-              <div class="post-type-tag">🎬 Reels</div>
+              <div class="post-type-tag">🎨 Arte</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,13,this.innerText)">Expedição Aventureiro — Reels de chamada</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,13,this.innerText)">Algum problema?</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,13)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day" data-day="14"><div class="day-num">14</div><div class="special-label">☕ Dia Mundial do Café</div><button class="add-post-btn" onclick="openModal(3,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div>
-            <div class="post-card arte" onclick="openModal(3,15)">
+            <div class="post-card foto" onclick="openModal(3,15)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,15)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,15)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,15)">🗑</button>
               </div>
-              <div class="post-type-tag">🎨 Arte</div>
+              <div class="post-type-tag">📸 Foto</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,15,this.innerText)">Viajar é bem mais leve</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,15,this.innerText)">Chocolate que fala por si</div>
               
-              <div class="card-gallery"><div class="card-thumb" onclick="event.stopPropagation();onThumbClick(3,15,0)"><img src="" alt=""><button class="rm-thumb" onclick="event.stopPropagation();removeCardThumb(3,15,0)">✕</button></div><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,15)" title="Adicionar foto">＋</button></div>
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,15)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(3,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div>
-            <div class="post-card foto" onclick="openModal(3,17)">
+            <div class="post-card arte" onclick="openModal(3,17)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,17)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,17)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,17)">🗑</button>
               </div>
-              <div class="post-type-tag">📸 Foto</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,17,this.innerText)">Praia do Aventureiro — Foto</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,17)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(3,18,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(3,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div>
-            <div class="post-card arte" onclick="openModal(3,20)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,20)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(3,20)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,20)">🗑</button>
-              </div>
               <div class="post-type-tag">🎨 Arte</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,20,this.innerText)">O paraíso existe</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,17,this.innerText)">Qual o seu favorito?</div>
               
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,20)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="21"><div class="day-num">21</div><div class="special-label">🇧🇷 Tiradentes</div>
-            <div class="post-card reels" onclick="openModal(3,21)">
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,17)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(3,18,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(3,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(3,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><div class="special-label">🇧🇷 Tiradentes</div>
+            <div class="post-card arte" onclick="openModal(3,21)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,21)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,21)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,21)">🗑</button>
               </div>
-              <div class="post-type-tag">🎬 Reels</div>
+              <div class="post-type-tag">🎨 Arte</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,21,this.innerText)">Memória do celular — Tiradentes</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,21,this.innerText)">Pistacchio</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,21)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day" data-day="22"><div class="day-num">22</div><div class="special-label">🌍 Dia da Terra</div><button class="add-post-btn" onclick="openModal(3,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><div class="special-label">📚 Dia Int. do Livro</div>
@@ -448,43 +448,31 @@
               </div>
               <div class="post-type-tag">🎬 Reels</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,23,this.innerText)">TBT Expedição Aventureiro</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,23,this.innerText)">Bastidores do gelato</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,23)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="24"><div class="day-num">24</div><div class="special-label">🥩 Dia Int. do Churrasco</div>
-            <div class="post-card foto" onclick="openModal(3,24)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,24)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(3,24)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,24)">🗑</button>
-              </div>
-              <div class="post-type-tag">📸 Foto</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,24,this.innerText)">Lagoa Azul</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,24)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(3,25,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(3,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div>
-            <div class="post-card arte" onclick="openModal(3,27)">
+            </div></div><div class="cal-day" data-day="24"><div class="day-num">24</div><div class="special-label">🥩 Dia Int. do Churrasco</div><button class="add-post-btn" onclick="openModal(3,24,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(3,25,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(3,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div>
+            <div class="post-card carrossel" onclick="openModal(3,27)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,27)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,27)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,27)">🗑</button>
               </div>
-              <div class="post-type-tag">🎨 Arte</div>
+              <div class="post-type-tag">🖼 Carrossel</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,27,this.innerText)">Sua pausa merecida começa aqui</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,27,this.innerText)">O que tem dentro do seu gelato?</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,27)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day" data-day="28"><div class="day-num">28</div><div class="special-label">👵 Dia da Sogra</div><button class="add-post-btn" onclick="openModal(3,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div>
-            <div class="post-card reels" onclick="openModal(3,29)">
+            <div class="post-card foto" onclick="openModal(3,29)">
               <div class="card-actions">
                 <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,29)" title="Toggle postado">✅</button>
                 <button class="card-btn" onclick="event.stopPropagation();openModal(3,29)">✏️</button>
                 <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,29)">🗑</button>
               </div>
-              <div class="post-type-tag">🎬 Reels</div>
+              <div class="post-type-tag">📸 Foto</div>
               
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,29,this.innerText)">Roteiro Ilhas Paradisíacas</div>
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,29,this.innerText)">Gelato Pet</div>
               
               <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,29)" title="Adicionar foto">＋</button></div>
             </div></div><div class="cal-day" data-day="30"><div class="day-num">30</div><div class="special-label">🎷 Dia Int. do Jazz</div><button class="add-post-btn" onclick="openModal(3,30,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-4"><div class="month-header"><div class="month-title">Maio <em>2026</em></div><div class="month-badge">Mês 5</div></div><div class="month-notes" contenteditable="true" data-month="5" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
@@ -495,164 +483,32 @@
     <div class="plan-grid">
       <div class="plan-cell">
         <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
-        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(5,'objetivos',this.value)">Diversificar roteiros (Super Lagoa Azul, Meia Volta, Ilhas Paradisíacas), reforçar prova social e manter frequência constante.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(5,'objetivos',this.value)"></textarea>
       </div>
       <div class="plan-cell">
         <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
-        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(5,'investimento',this.value)">A definir.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(5,'investimento',this.value)"></textarea>
       </div>
       <div class="plan-cell">
         <div class="plan-label"><span>💸</span> Tráfego Pago</div>
-        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google…" onchange="savePlanField(5,'trafego',this.value)">A definir.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google…" onchange="savePlanField(5,'trafego',this.value)"></textarea>
       </div>
       <div class="plan-cell">
         <div class="plan-label"><span>🌟</span> Influenciadores</div>
-        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(5,'influenciadores',this.value)">A definir.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(5,'influenciadores',this.value)"></textarea>
       </div>
       <div class="plan-cell" style="border-right:none">
         <div class="plan-label"><span>👤</span> Persona do Mês</div>
-        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas…" onchange="savePlanField(5,'persona',this.value)">Turistas, moradores de Angra e região, casais, grupos de amigos que buscam passeios de lancha e experiências no mar.</textarea>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas…" onchange="savePlanField(5,'persona',this.value)"></textarea>
       </div>
     </div>
     <div class="plan-grid-bottom">
       <div class="plan-cell-full">
         <div class="plan-label"><span>📝</span> Observações Gerais</div>
-        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões…" onchange="savePlanField(5,'observacoes',this.value)">Dia do Turismo (08/05) e Dia das Mães (10/05) com stories temáticos. Apresentar diferentes roteiros ao longo do mês.</textarea>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões…" onchange="savePlanField(5,'observacoes',this.value)"></textarea>
       </div>
     </div>
-  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">💼 Dia do Trabalho</div>
-            <div class="post-card foto" onclick="openModal(4,1)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,1)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,1)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,1)">🗑</button>
-              </div>
-              <div class="post-type-tag">📸 Foto</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,1,this.innerText)">Embarque</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,1)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day wknd-col" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(4,2,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(4,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div>
-            <div class="post-card arte" onclick="openModal(4,4)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,4)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,4)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,4)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎨 Arte</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,4,this.innerText)">Feedbacks — Quem vive, recomenda</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,4)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(4,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div>
-            <div class="post-card reels" onclick="openModal(4,6)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,6)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,6)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,6)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎬 Reels</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,6,this.innerText)">Super Lagoa Azul</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,6)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(4,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><div class="special-label">🧭 Dia do Turismo</div>
-            <div class="post-card arte" onclick="openModal(4,8)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,8)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,8)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,8)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎨 Arte</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,8,this.innerText)">Angra e turismo têm tudo a ver</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,8)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day wknd-col" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(4,9,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><div class="special-label">💐 Dia das Mães</div><button class="add-post-btn" onclick="openModal(4,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(4,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div>
-            <div class="post-card foto" onclick="openModal(4,12)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,12)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,12)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,12)">🗑</button>
-              </div>
-              <div class="post-type-tag">📸 Foto</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,12,this.innerText)">Praia do Dentista</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,12)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(4,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div>
-            <div class="post-card reels" onclick="openModal(4,14)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,14)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,14)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,14)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎬 Reels</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,14,this.innerText)">Isso recarrega sua mente</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,14)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(4,15,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(4,16,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(4,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div>
-            <div class="post-card arte" onclick="openModal(4,18)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,18)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,18)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,18)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎨 Arte</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,18,this.innerText)">Navegar por Angra é outro patamar</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,18)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(4,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div>
-            <div class="post-card reels" onclick="openModal(4,20)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,20)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,20)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,20)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎬 Reels</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,20,this.innerText)">Passeio Meia Volta</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,20)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(4,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div>
-            <div class="post-card foto" onclick="openModal(4,22)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,22)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,22)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,22)">🗑</button>
-              </div>
-              <div class="post-type-tag">📸 Foto</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,22,this.innerText)">Coqueiro do Aventureiro</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,22)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day wknd-col" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(4,23,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(4,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(4,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div>
-            <div class="post-card carrossel" onclick="openModal(4,26)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,26)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,26)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,26)">🗑</button>
-              </div>
-              <div class="post-type-tag">🖼 Carrossel</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,26,this.innerText)">Copinho que resolve qualquer dia</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,26)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(4,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div>
-            <div class="post-card reels" onclick="openModal(4,28)">
-              <div class="card-actions">
-                <button class="card-btn" onclick="event.stopPropagation();togglePostado(4,28)" title="Toggle postado">✅</button>
-                <button class="card-btn" onclick="event.stopPropagation();openModal(4,28)">✏️</button>
-                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(4,28)">🗑</button>
-              </div>
-              <div class="post-type-tag">🎬 Reels</div>
-              
-              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(4,28,this.innerText)">Um final de semana pode mudar tudo</div>
-              
-              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(4,28)" title="Adicionar foto">＋</button></div>
-            </div></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(4,29,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(4,30,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><div class="special-label">🟡 Fim Maio Amarelo</div><button class="add-post-btn" onclick="openModal(4,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-5"><div class="month-header"><div class="month-title">Junho <em>2026</em></div><div class="month-badge">Mês 6</div></div><div class="month-notes" contenteditable="true" data-month="6" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">💼 Dia do Trabalho</div><button class="add-post-btn" onclick="openModal(4,1,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(4,2,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(4,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(4,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(4,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(4,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(4,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><div class="special-label">🧭 Dia do Turismo</div><button class="add-post-btn" onclick="openModal(4,8,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(4,9,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><div class="special-label">💐 Dia das Mães</div><button class="add-post-btn" onclick="openModal(4,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(4,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(4,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(4,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(4,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(4,15,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(4,16,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(4,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(4,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(4,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(4,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(4,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(4,22,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(4,23,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(4,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(4,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(4,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(4,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(4,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(4,29,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(4,30,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><div class="special-label">🟡 Fim Maio Amarelo</div><button class="add-post-btn" onclick="openModal(4,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-5"><div class="month-header"><div class="month-title">Junho <em>2026</em></div><div class="month-badge">Mês 6</div></div><div class="month-notes" contenteditable="true" data-month="6" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
     <div class="plan-header-row">
       <span class="plan-icon">📋</span>
       <span>Planejamento do Mês</span>
@@ -889,14 +745,14 @@
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <div class="modal-header">
-      <h3>Editar Post · <span id="modalDateLabel"></span></h3>
+      <h3>Editar Post · <span id="modalDateLabel">4/1/2026</span></h3>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="modal-body">
       <div class="form-group">
         <label>Tipo de Conteúdo</label>
         <div class="type-grid">
-          <div class="type-opt" data-type="arte" onclick="selectType('arte')">🎨 Arte</div>
+          <div class="type-opt selected" data-type="arte" onclick="selectType('arte')">🎨 Arte</div>
           <div class="type-opt" data-type="foto" onclick="selectType('foto')">📸 Foto</div>
           <div class="type-opt" data-type="story" onclick="selectType('story')">📱 Story</div>
           <div class="type-opt" data-type="reels" onclick="selectType('reels')">🎬 Reels</div>
@@ -907,7 +763,7 @@
         <label>Título / Frase da Postagem</label>
         <input type="text" id="modalPostTitle" placeholder="Ex: Corte bem feito muda tudo">
       </div>
-      <div class="form-group" id="fieldImgObs" style="display:none">
+      <div class="form-group" id="fieldImgObs" style="">
         <label>Observações de Imagem / Vídeo</label>
         <textarea id="modalImgObs" placeholder="Descreva a imagem ideal, enquadramento, luz, referências…" style="min-height:120px"></textarea>
       </div>
@@ -924,14 +780,13 @@ Slide 2: …" style="min-height:160px"></textarea>
         <label>Nº de Slides</label>
         <input type="text" id="modalSlidesNum" placeholder="Ex: 7 slides">
       </div>
-      <div class="form-group" id="fieldCaption">
+      <div class="form-group" id="fieldCaption" style="">
         <label>Legenda completa</label>
         <textarea id="modalCaption" placeholder="Texto, hashtags, telefone…"></textarea>
       </div>
       <div class="form-group">
         <div class="mgal-label">Imagens / Fotos <span class="mgal-hint">— arraste ou clique em ＋</span></div>
-        <div class="modal-gallery" id="modalGallery" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleDrop(event)">
-        </div>
+        <div class="modal-gallery" id="modalGallery" ondragover="event.preventDefault();this.classList.add('drag-over')" ondragleave="this.classList.remove('drag-over')" ondrop="handleDrop(event)"><button class="mgal-add" type="button"><span style="font-size:22px">＋</span><span class="lbl">foto</span></button></div>
       </div>
       <div class="form-group" id="fieldVideoLink" style="display:none">
         <label>🎬 Link do Vídeo</label>
@@ -1005,7 +860,7 @@ Slide 2: …" style="min-height:160px"></textarea>
   </div>
 </div>
 
-<div class="toast" id="toast">1 imagem(ns) adicionada(s)!</div>
+<div class="toast show" id="toast">Salvando no site...</div>
 
 <script>
 const MONTH_NAMES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
@@ -1520,157 +1375,11 @@ function jsonForInlineScript(value){
 }
 
 function upsertPersistedStatePatch(html, state){
-  const patch = `\n<script id="persisted-calendar-state">\nwindow.__PERSISTED_CALENDAR_STATE__ = ${jsonForInlineScript(state)};\nif(typeof applyCalendarState === 'function'){ applyCalendarState(window.__PERSISTED_CALENDAR_STATE__); }\n<\/script>\n`;
-  if(/<script id="persisted-calendar-state">[\s\S]*?<\/script>/i.test(html)){
-    return html.replace(/<script id="persisted-calendar-state">[\s\S]*?<\/script>/i, patch.trim());
-  }
-  return html.replace(/<\/body>/i, patch + '</body>');
-}
+  const patch = `\n<script id="persisted-calendar-state">
+window.__PERSISTED_CALENDAR_STATE__ = {"posts":[{"month":4,"day":10,"type":"foto","title":"Copinho que resolve qualquer dia","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Foto de copinhos Cuor Di Crema com alguns já servidos, mostrando variedade de sabores e cores.","imgObs":"Foto de copinhos com gelato. Manter padrão visual já criado, sem muita edição para não mudar cores.","caption":"Tem coisa melhor do que escolher o copinho e saber que vem felicidade dentro? 🍦\n\nDois sabores? Três? A gente não julga.\n\nA gente só serve. Com carinho e com a melhor receita italiana. 🤌\n\nCada colherada é um abraço. 🤎\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":13,"type":"arte","title":"Algum problema?","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Imagem com gelato + setas e respostas (Sim / Não) levando sempre ao gelato.","imgObs":"Arte com gelato + setas e respostas (Sim / Não) levando sempre ao gelato. Tom divertido/provocativo.","caption":"Tem problema? Tem gelato.\n\nDia ruim? Gelato.\nDia bom? Gelato.\nTá calor? Gelato.\nTá frio? Gelato também. 🤷‍♀️\n\nTem alguma situação que um Cuor di Crema não melhora?\n\nA gente acha que não. 🍦😌\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":15,"type":"foto","title":"Chocolate que fala por si","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Copinho de gelato com barra de chocolate ao lado.","imgObs":"Foto: copinho de gelato com barra de chocolate ao lado. Visual apetitoso, luz natural.","caption":"Pra quem acredita que chocolate nunca é demais… 🌫🍦\n\nCremoso, intenso e feito do jeito que tem que ser.\n\nSimples assim: você prova… e entende.\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":17,"type":"arte","title":"Qual o seu favorito?","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Gelatos com setas indicando sabores.","imgObs":"Arte com gelatos + setas indicando os sabores. Manter padrão visual.","caption":"A missão mais difícil do dia: escolher só dois. 😅\n\nPistacchio? Dulce de Leche? Tiramisù? Stracciatella?\n\nSe fosse você… qual seria a escolha? 👇🍦\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":21,"type":"arte","title":"Pistacchio","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Arte com copinho de pistache + elementos visuais.","imgObs":"Arte com copinho de pistache + elementos visuais. Manter padrão.","caption":"Se existe amor à primeira colherada, o nome dele é Pistacchio. 💚\n\nFeito com ingredientes nobres, cor marcante e uma mistura de texturas que não sai da memória.\n\nUm clássico que nunca decepciona. 🤌\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":23,"type":"reels","title":"Bastidores do gelato","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","descricao":"Vídeo mostrando processo artesanal + ingredientes + montagem.","imgObs":"","roteiro":"🎬 Cena 1 — \"Você sabe como o seu gelato é feito?\"\n🎬 Cena 2 — Ingredientes frescos\n🎬 Cena 3 — Processo (textura cremosa)\n🎬 Cena 4 — Carapina no pozzeto\n🎬 Cena 5 — Montagem do copinho\n🎬 Cena 6 — Entrega ao cliente","caption":"Do ingrediente ao copinho. Tudo feito com método italiano. 🇮🇹\n\nFrutas in natura. Creme de leite fresco. Zero gordura hidrogenada.\n\nArmazenado na carapina, dentro do pozzeto, como manda a tradição.\n\nIsso não é sorvete.\nIsso é gelato Cuor di Crema. 🤌\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":27,"type":"carrossel","title":"O que tem dentro do seu gelato?","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slidesNum":"4 slides","roteiro":"","descricao":"Carrossel mostrando detalhes dos sabores mais conhecidos.","imgObs":"","slides":"Slide 1 — Pistache: Feito com pistaches selecionados, textura cremosa e sabor marcante.\nSlide 2 — Cioccolato Belga: Chocolate intenso, encorpado e com aquele amargor equilibrado que faz toda diferença.\nSlide 3 — Fragola (Morango): Morangos de verdade, sabor leve, refrescante e naturalmente doce.\nSlide 4 — Stracciatella: Base cremosa com lascas de chocolate que quebram na colherada. Clássico italiano.","caption":"Você pede… mas sabe o que tem dentro? 👀\n\nA gente trouxe os detalhes dos sabores que mais saem por aqui.\n\nSpoiler: depois de ler, vai querer provar todos de novo. 🤤\n\nPassa pro lado 👉\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":4,"day":29,"type":"foto","title":"Gelato Pet","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Foto do gelato pet, podendo ser com cachorro ou versão mais clean.","imgObs":"Foto do gelato pet com cachorro ou versão clean. Conteúdo leve e compartilhável.","caption":"Aqui, até o seu melhor amigo pode aproveitar 🐶🍦\n\nGelato natural, feito com cuidado e ingredientes que fazem bem.\n\nPorque eles também merecem esse momento. 🐾\n\n📍 Shopping Piratas — Estr. das Marinas, 91, Angra dos Reis\n🕐 Todos os dias, das 10h às 20h\n📲 Delivery via iFood!"},{"month":1,"day":4,"type":"arte","title":"teste","caption":"","descricao":"","imgObs":"","roteiro":"","videoLink":"","slides":"","slidesNum":"","pending":false,"postado":false,"trafego":false,"imgs":[]}],"plans":{"1":{},"2":{},"3":{},"4":{"objetivos":"Fortalecer presença digital da unidade de Angra dos Reis, apresentar o cardápio de gelatos artesanais, gerar desejo e engajamento com conteúdo sensorial e educativo.","investimento":"A definir.","trafego":"A definir.","influenciadores":"A definir.","persona":"Moradores de Angra dos Reis e região, turistas, famílias, casais e jovens que frequentam o Shopping Piratas e buscam sobremesas premium e experiências gastronômicas.","observacoes":"8 posts em abril (3 Artes, 3 Fotos, 1 Reels, 1 Carrossel). Foco em apresentar sabores, bastidores artesanais, gelato pet e criar desejo. Post do dia 17 marcado como ALTERAR. Reels do dia 23 precisa de captação. Carrossel do dia 27 e foto do dia 29 precisam ser feitos."},"5":{},"6":{},"7":{},"8":{},"9":{},"10":{},"11":{},"12":{}},"specialDates":{"1":{"1":"🎆 Ano Novo","6":"🏖️ Feriado RJ"},"2":{"16":"🎭 Carnaval","17":"🎭 Carnaval","18":"🎭 Quarta-feira de Cinzas"},"3":{"8":"👩 Dia da Mulher","20":"🌿 Início do Outono"},"4":{"1":"🤥 Dia da Mentira","2":"🧩 Consciência do Autismo","3":"✝️ Sexta-Feira Santa","5":"🐣 Páscoa","6":"🙏 São Benedito","7":"🌍 Dia Mundial da Saúde","8":"🎗️ Combate ao Câncer","13":"💋 Dia do Beijo","14":"☕ Dia Mundial do Café","21":"🇧🇷 Tiradentes","22":"🌍 Dia da Terra","23":"📚 Dia Int. do Livro","24":"🥩 Dia Int. do Churrasco","28":"👵 Dia da Sogra","30":"🎷 Dia Int. do Jazz"},"5":{"1":"💼 Dia do Trabalho","8":"🧭 Dia do Turismo","10":"💐 Dia das Mães","31":"🟡 Fim Maio Amarelo"},"6":{"5":"🌍 Meio Ambiente","12":"💑 Dia dos Namorados"},"7":{},"8":{"9":"👨 Dia dos Pais"},"9":{"7":"🇧🇷 Independência","15":"🛍️ Dia do Cliente","22":"🌸 Primavera"},"10":{"2":"👶 Dia das Crianças","12":"🇧🇷 N.Sra. Aparecida","31":"🎃 Halloween"},"11":{"2":"✝️ Finados","15":"🇧🇷 Proclamação Rep.","20":"⚫ Black Friday"},"12":{"8":"🎄 Imaculada Conceição","25":"🎄 Natal","31":"🥂 Réveillon"}},"monthNotes":{"1":"","2":"","3":"","4":"Cuor di Crema Angra — 8 posts | 3 Artes · 3 Fotos · 1 Reels · 1 Carrossel","5":"","6":"","7":"","8":"","9":"","10":"","11":"","12":""},"header":{"client":"Cuor di Crema Angra","year":"2026","sub":"Calendário Editorial — Abril 2026 · @cuordicrema.angra"}};
+if(typeof applyCalendarState === 'function'){ applyCalendarState(window.__PERSISTED_CALENDAR_STATE__); }
+</script><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;">
 
-async function commitHtmlToGitHub(html){
-  const cfg = await ensureGitHubPagesConfig();
-  const apiBase = `https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${cfg.path.split('/').map(encodeURIComponent).join('/')}`;
-  let sha = null;
-
-  const existing = await fetch(`${apiBase}?ref=${encodeURIComponent(cfg.branch)}`, {
-    headers: {
-      'Accept': 'application/vnd.github+json',
-      'Authorization': `Bearer ${cfg.token}`
-    }
-  });
-
-  if(existing.status === 200){
-    const current = await existing.json();
-    sha = current.sha;
-  }else if(existing.status !== 404){
-    const errText = await existing.text();
-    throw new Error(`GitHub respondeu ${existing.status}. ${errText}`);
-  }
-
-  const body = {
-    message: `Atualiza ${cfg.path} via calendário editorial`,
-    content: utf8ToBase64(html),
-    branch: cfg.branch
-  };
-  if(sha) body.sha = sha;
-
-  const response = await fetch(apiBase, {
-    method: 'PUT',
-    headers: {
-      'Accept': 'application/vnd.github+json',
-      'Authorization': `Bearer ${cfg.token}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
-  });
-
-  if(!response.ok){
-    const errText = await response.text();
-    throw new Error(`Não foi possível salvar no GitHub (${response.status}). ${errText}`);
-  }
-
-  return response.json();
-}
-
-function collectCalendarState(){
-  const state = {
-    posts: POSTS,
-    plans: PLAN_DATA,
-    specialDates: {},
-    monthNotes: {},
-    header: {
-      client: document.getElementById('hdrClient')?.innerHTML || '',
-      year: document.getElementById('hdrYear')?.innerHTML || '',
-      sub: document.getElementById('hdrSub')?.innerHTML || ''
-    }
-  };
-
-  MONTHS_CONFIG.forEach(mc=>{
-    state.specialDates[String(mc.month)] = mc.special || {};
-  });
-
-  document.querySelectorAll('.month-notes').forEach(el=>{
-    const m = el.dataset.month;
-    if(m) state.monthNotes[m] = el.innerHTML;
-  });
-
-  return state;
-}
-
-function applyCalendarState(state){
-  if(!state) return;
-
-  if(state.header){
-    if(document.getElementById('hdrClient') && typeof state.header.client === 'string') document.getElementById('hdrClient').innerHTML = state.header.client;
-    if(document.getElementById('hdrYear') && typeof state.header.year === 'string') document.getElementById('hdrYear').innerHTML = state.header.year;
-    if(document.getElementById('hdrSub') && typeof state.header.sub === 'string') document.getElementById('hdrSub').innerHTML = state.header.sub;
-  }
-
-  if(state.monthNotes){
-    document.querySelectorAll('.month-notes').forEach(el=>{
-      const m = el.dataset.month;
-      if(m && state.monthNotes[m] !== undefined) el.innerHTML = state.monthNotes[m];
-    });
-  }
-
-  if(state.posts) POSTS = state.posts;
-  if(state.plans) PLAN_DATA = state.plans;
-  if(state.specialDates){
-    MONTHS_CONFIG.forEach(mc=>{
-      mc.special = state.specialDates[String(mc.month)] || {};
-    });
-  }
-
-  if(typeof renderAll === 'function') renderAll();
-}
-
-function buildPersistentHtml(){
-  const client = (document.getElementById('hdrClient')?.innerText || '').trim();
-  const year = (document.getElementById('hdrYear')?.innerText || '').trim();
-  const sub = (document.getElementById('hdrSub')?.innerText || '').trim();
-  let src = document.documentElement.outerHTML;
-  src = src.replace(/(<span contenteditable="true" id="hdrClient"[^>]*>)([\s\S]*?)(<\/span>)/, `$1${client}$3`);
-  src = src.replace(/(<em contenteditable="true" id="hdrYear"[^>]*>)([\s\S]*?)(<\/em>)/, `$1${year}$3`);
-  src = src.replace(/(<span[^>]*id="hdrSub"[^>]*>)([\s\S]*?)(<\/span>)/, `$1${sub}$3`);
-  src = upsertPersistedStatePatch(src, collectCalendarState());
-  return src;
-}
-
-async function salvarAlteracoes(){
-  try{
-    showToast('Salvando no site...');
-    const html = buildPersistentHtml();
-    await commitHtmlToGitHub(html);
-    showToast('Alterações salvas no site com sucesso!');
-  }catch(err){
-    console.error(err);
-    showToast(err && err.message ? err.message : 'Não foi possível salvar no site.');
-  }
-}
-
-
-function showToast(msg){
-  const t=document.getElementById('toast');t.textContent=msg;
-  t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);
-}
-
-document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
-
-// ── Init ──
-buildMonthNav();
-renderAll();
-
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      const id=e.target.id;
-      const idx=parseInt(id.replace('month-',''));
-      document.querySelectorAll('.month-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
-    }
-  });
-},{threshold:0.15});
-document.querySelectorAll('.month-block').forEach(el=>observer.observe(el));
-</script><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;">
 
 
 </body></html>
