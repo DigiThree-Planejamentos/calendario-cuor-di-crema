@@ -1452,13 +1452,28 @@ function exportHTML(){
 
 function inferGitHubPagesConfig(){
   const host = window.location.hostname || '';
-  const path = window.location.pathname || '/';
+  const rawPath = window.location.pathname || '/';
   const owner = host.replace(/\.github\.io$/i,'');
-  const repo = owner ? `${owner}.github.io` : '';
-  let filePath = path.replace(/^\//,'');
+  const segments = rawPath.replace(/^\/+|\/+$/g,'').split('/').filter(Boolean);
+
+  let repo = '';
+  let filePath = 'index.html';
+
+  if(owner){
+    if(segments.length && segments[0] !== 'index.html'){
+      repo = segments[0];
+      const rest = segments.slice(1);
+      filePath = rest.length ? rest.join('/') : 'index.html';
+    }else{
+      repo = `${owner}.github.io`;
+      filePath = segments.length ? segments.join('/') : 'index.html';
+    }
+  }
+
   if(!filePath) filePath = 'index.html';
-  else if(filePath.endsWith('/')) filePath += 'index.html';
+  else if(rawPath.endsWith('/')) filePath += '/index.html';
   else if(!/\.html?$/i.test(filePath)) filePath += '/index.html';
+
   return { owner, repo, branch: 'main', path: filePath, token: '' };
 }
 
