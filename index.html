@@ -1470,9 +1470,11 @@ function inferGitHubPagesConfig(){
     }
   }
 
-  if(!filePath) filePath = 'index.html';
-  else if(rawPath.endsWith('/')) filePath += '/index.html';
-  else if(!/\.html?$/i.test(filePath)) filePath += '/index.html';
+  if(!filePath) {
+    filePath = 'index.html';
+  } else if (!/\.html?$/i.test(filePath)) {
+    filePath = filePath.replace(/\/+$/,'') + '/index.html';
+  }
 
   return { owner, repo, branch: 'main', path: filePath, token: '' };
 }
