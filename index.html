@@ -1454,25 +1454,27 @@ function inferGitHubPagesConfig(){
   const host = window.location.hostname || '';
   const rawPath = window.location.pathname || '/';
   const owner = host.replace(/\.github\.io$/i,'');
-  const segments = rawPath.replace(/^\/+|\/+$/g,'').split('/').filter(Boolean);
+  const cleanPath = rawPath.split('?')[0].split('#')[0];
+  const segments = cleanPath.replace(/^\/+|\/+$/g,'').split('/').filter(Boolean);
 
   let repo = '';
   let filePath = 'index.html';
 
   if(owner){
-    if(segments.length && segments[0] !== 'index.html'){
+    const isUserOrOrgPage = segments.length === 0 || (segments.length === 1 && /^index\.html?$/i.test(segments[0]));
+
+    if(isUserOrOrgPage){
+      repo = `${owner}.github.io`;
+      filePath = segments.length ? segments[0] : 'index.html';
+    } else {
       repo = segments[0];
       const rest = segments.slice(1);
       filePath = rest.length ? rest.join('/') : 'index.html';
-    }else{
-      repo = `${owner}.github.io`;
-      filePath = segments.length ? segments.join('/') : 'index.html';
     }
   }
 
-  if(!filePath) {
-    filePath = 'index.html';
-  } else if (!/\.html?$/i.test(filePath)) {
+  filePath = (filePath || 'index.html').replace(/^\/+/, '').replace(/\/+/g, '/');
+  if(!/\.html?$/i.test(filePath)){
     filePath = filePath.replace(/\/+$/,'') + '/index.html';
   }
 
