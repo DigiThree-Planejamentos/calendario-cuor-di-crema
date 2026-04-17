@@ -1460,14 +1460,6 @@ function inferGitHubPagesConfig(){
   };
 }
 
-  filePath = (filePath || 'index.html').replace(/^\/+/, '').replace(/\/+/g, '/');
-  if(!/\.html?$/i.test(filePath)){
-    filePath = filePath.replace(/\/+$/,'') + '/index.html';
-  }
-
-  return { owner, repo, branch: 'main', path: filePath, token: '' };
-}
-
 const GITHUB_CFG_KEY = 'calendar-github-pages-config-v1';
 
 function loadGitHubPagesConfig(){
