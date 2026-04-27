@@ -194,6 +194,7 @@
 
   @media print{.toolbar,.add-post-btn,.card-actions,.add-thumb-btn{display:none!important;}body{background:#fff;}.post-card{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -217,7 +218,8 @@
 <div class="toolbar">
   <span class="toolbar-label">Ações:</span>
   <button class="btn btn-cyan" onclick="window.print()">🖨 Imprimir</button>
-  <button class="btn btn-cyan" onclick="salvarAlteracoes()">💾 Salvar alterações</button>
+  <button class="btn btn-ghost" onclick="exportHTML()">💾 Salvar HTML</button>
+  <button class="btn btn-ghost" onclick="saveSiteData()">💾 Salvar no site</button>
   <button class="btn btn-ghost" id="editModeBtn" onclick="toggleEditMode()">✏️ Modo Edição</button>
   <button class="btn btn-ghost" onclick="openDatasModal()">🗓 Datas Comemorativas</button>
   <div class="month-nav" id="monthNav"><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn active" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
@@ -1007,6 +1009,24 @@ Slide 2: …" style="min-height:160px"></textarea>
 <div class="toast" id="toast">1 imagem(ns) adicionada(s)!</div>
 
 <script>
+// ===== SUPABASE CONFIG =====
+const SUPABASE_URL = 'https://aprneolltdkizvfakuus.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_tmWBQV8mZnk7FBvq1iZ3pA_lprGokcu';
+const supabaseClient = window.supabase && typeof window.supabase.createClient === 'function'
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+  : null;
+const CALENDAR_ID = 'cuor-di-crema-angra-2026';
+const CALENDAR_NAME = 'Calendário Cuor di Crema Angra';
+let _isApplyingSiteData = false;
+let _autosaveTimer = null;
+function scheduleSiteSave(){
+  if(_isApplyingSiteData) return;
+  clearTimeout(_autosaveTimer);
+  _autosaveTimer = setTimeout(()=>{
+    if(typeof saveSiteData === 'function') saveSiteData({silent:true});
+  }, 800);
+}
+
 const MONTH_NAMES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
 const MONTHS_CONFIG = [
@@ -1031,7 +1051,7 @@ POSTS = POSTS.map(p => ({...p, imgs: p.imgs||[], caption:p.caption||'', descrica
 let PLAN_DATA = {"1": {}, "2": {}, "3": {}, "4": {"objetivos": "Fortalecer presen\u00e7a digital da unidade de Angra dos Reis, apresentar o card\u00e1pio de gelatos artesanais, gerar desejo e engajamento com conte\u00fado sensorial e educativo.", "investimento": "A definir.", "trafego": "A definir.", "influenciadores": "A definir.", "persona": "Moradores de Angra dos Reis e regi\u00e3o, turistas, fam\u00edlias, casais e jovens que frequentam o Shopping Piratas e buscam sobremesas premium e experi\u00eancias gastron\u00f4micas.", "observacoes": "8 posts em abril (3 Artes, 3 Fotos, 1 Reels, 1 Carrossel). Foco em apresentar sabores, bastidores artesanais, gelato pet e criar desejo. Post do dia 17 marcado como ALTERAR. Reels do dia 23 precisa de capta\u00e7\u00e3o. Carrossel do dia 27 e foto do dia 29 precisam ser feitos."}, "5": {}, "6": {}, "7": {}, "8": {}, "9": {}, "10": {}, "11": {}, "12": {}};
 
 function getPlan(m){ return PLAN_DATA[m] || (PLAN_DATA[m]={}); }
-function savePlanField(m, field, val){ getPlan(m)[field] = val; }
+function savePlanField(m, field, val){ getPlan(m)[field] = val; scheduleSiteSave(); }
 
 const TYPE_ICONS={arte:'🎨',foto:'📸',story:'📱',reels:'🎬',carrossel:'🖼'};
 const TYPE_LABELS={arte:'Arte',foto:'Foto',story:'Story',reels:'Reels',carrossel:'Carrossel'};
@@ -1219,7 +1239,7 @@ function buildMonthBlock(mc,mIdx){
 
 function updateTitle(mIdx,day,t){
   const i=getPostIdx(mIdx,day);
-  if(i>=0)POSTS[i].title=t.trim();
+  if(i>=0){ POSTS[i].title=t.trim(); scheduleSiteSave(); }
 }
 
 function openModal(mIdx,day,isNew=false){
@@ -1302,13 +1322,13 @@ function savePost(){
     imgs:[...modalImgs]
   };
   if(currentPostIdx>=0){POSTS[currentPostIdx]=pd;}else{POSTS.push(pd);}
-  closeModal();renderAll();showToast('✅ Post salvo!');
+  closeModal();renderAll();showToast('✅ Post salvo!'); scheduleSiteSave();
 }
 function deletePost(){if(!confirm('Excluir este post?'))return;deletePostByKey(currentMonthIdx,currentDay);closeModal();}
 function deletePostByKey(mIdx,day){
   const mc=MONTHS_CONFIG[mIdx];
   const i=POSTS.findIndex(p=>p.month===mc.month&&p.day===day);
-  if(i>=0){POSTS.splice(i,1);renderAll();showToast('Post excluído.');}
+  if(i>=0){POSTS.splice(i,1);renderAll();showToast('Post excluído.'); scheduleSiteSave();}
 }
 function togglePostado(mIdx,day){
   const mc=MONTHS_CONFIG[mIdx];
@@ -1316,7 +1336,7 @@ function togglePostado(mIdx,day){
   if(i<0)return;
   POSTS[i].postado=!POSTS[i].postado;
   if(POSTS[i].postado)POSTS[i].pending=false;
-  renderAll();showToast(POSTS[i].postado?'✅ Marcado como postado!':'↩️ Desmarcado.');
+  renderAll();showToast(POSTS[i].postado?'✅ Marcado como postado!':'↩️ Desmarcado.'); scheduleSiteSave();
 }
 
 let _cardMIdx=null,_cardDay2=null;
@@ -1422,7 +1442,7 @@ function saveDatas(){
   MONTHS_CONFIG[mIdx].special = newSpecial;
   closeDatasModal();
   renderAll();
-  showToast('🗓 Datas comemorativas atualizadas!');
+  showToast('🗓 Datas comemorativas atualizadas!'); scheduleSiteSave();
 }
 document.getElementById('datasMonthSel').addEventListener('change', renderDatasList);
 document.getElementById('datasOverlay').addEventListener('click', e=>{if(e.target===e.currentTarget)closeDatasModal();});
@@ -1452,85 +1472,124 @@ function showToast(msg){
   t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);
 }
 
-document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
 
-const STORAGE_KEY = 'calendario_cuor_di_crema_angra_abril_2026';
-
-function coletarEstadoAtual(){
+// ===== SUPABASE PERSISTENCE =====
+function saveLocalBackup(data){
+  try{ localStorage.setItem(CALENDAR_ID, JSON.stringify(data)); }catch(err){ console.warn('Backup local falhou:', err); }
+}
+function loadLocalBackup(){
+  try{
+    const raw = localStorage.getItem(CALENDAR_ID);
+    return raw ? JSON.parse(raw) : null;
+  }catch(err){
+    console.warn('Leitura do backup local falhou:', err);
+    return null;
+  }
+}
+function getSiteData(){
   return {
-    hdrClient: document.getElementById('hdrClient')?.innerHTML || '',
-    hdrYear: document.getElementById('hdrYear')?.innerHTML || '',
-    hdrSub: document.getElementById('hdrSub')?.innerHTML || '',
     posts: POSTS,
-    planData: PLAN_DATA,
-    months: MONTHS_CONFIG.map(m => ({
-      month: m.month,
-      notes: m.notes || '',
-      special: m.special || {}
-    }))
+    plan: PLAN_DATA,
+    months: MONTHS_CONFIG.map(m=>({ notes:m.notes||'', special:m.special||{} })),
+    header: {
+      client: document.getElementById('hdrClient')?.innerText || '',
+      year: document.getElementById('hdrYear')?.innerText || '',
+      sub: document.getElementById('hdrSub')?.innerText || ''
+    }
   };
 }
-
-function aplicarEstadoSalvo(estado){
-  if(!estado || typeof estado !== 'object') return;
-
-  if(Array.isArray(estado.posts)) POSTS = estado.posts;
-  if(estado.planData && typeof estado.planData === 'object') PLAN_DATA = estado.planData;
-
-  if(Array.isArray(estado.months)){
-    estado.months.forEach(savedMonth => {
-      const monthCfg = MONTHS_CONFIG.find(m => m.month === savedMonth.month);
-      if(monthCfg){
-        monthCfg.notes = savedMonth.notes || '';
-        monthCfg.special = savedMonth.special || {};
+function applySiteData(data){
+  if(!data || typeof data !== 'object') return;
+  _isApplyingSiteData = true;
+  try{
+    if(Array.isArray(data.posts)) POSTS = data.posts;
+    if(data.plan && typeof data.plan === 'object') PLAN_DATA = data.plan;
+    if(Array.isArray(data.months)){
+      data.months.forEach((m,i)=>{
+        if(MONTHS_CONFIG[i]){
+          if(Object.prototype.hasOwnProperty.call(m,'notes')) MONTHS_CONFIG[i].notes = m.notes || '';
+          if(m.special) MONTHS_CONFIG[i].special = m.special;
+        }
+      });
+    }
+    if(data.header){
+      if(data.header.client && document.getElementById('hdrClient')) document.getElementById('hdrClient').innerText = data.header.client;
+      if(data.header.year && document.getElementById('hdrYear')) document.getElementById('hdrYear').innerText = data.header.year;
+      if(data.header.sub && document.getElementById('hdrSub')) document.getElementById('hdrSub').innerText = data.header.sub;
+    }
+    renderAll();
+  }finally{
+    _isApplyingSiteData = false;
+  }
+}
+async function saveSiteData(options={}){
+  const payload = getSiteData();
+  saveLocalBackup(payload);
+  if(!supabaseClient){
+    if(!options.silent) showToast('⚠️ Salvo só no navegador');
+    return { ok:false, local:true };
+  }
+  try{
+    const { error } = await supabaseClient
+      .from('calendarios')
+      .upsert({ id: CALENDAR_ID, nome: CALENDAR_NAME, dados: payload }, { onConflict: 'id' });
+    if(error){
+      console.error('Erro Supabase:', error);
+      if(!options.silent) showToast('⚠️ Falhou no site, salvo local');
+      return { ok:false, error };
+    }
+    if(!options.silent) showToast('✅ Salvo no site!');
+    return { ok:true };
+  }catch(err){
+    console.error('Erro ao salvar:', err);
+    if(!options.silent) showToast('⚠️ Erro ao salvar no site, salvo local');
+    return { ok:false, error:err };
+  }
+}
+async function loadSiteData(){
+  if(supabaseClient){
+    try{
+      const { data, error } = await supabaseClient
+        .from('calendarios')
+        .select('dados')
+        .eq('id', CALENDAR_ID)
+        .maybeSingle();
+      if(!error && data && data.dados){
+        applySiteData(data.dados);
+        return true;
+      }
+      if(error) console.warn('Erro ao carregar Supabase:', error);
+    }catch(err){
+      console.warn('Erro ao carregar Supabase:', err);
+    }
+  }
+  const local = loadLocalBackup();
+  if(local){
+    applySiteData(local);
+    return true;
+  }
+  return false;
+}
+function setupMonthObserver(){
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const id=e.target.id;
+        const idx=parseInt(id.replace('month-',''));
+        document.querySelectorAll('.month-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
       }
     });
-  }
-
-  const hdrClient = document.getElementById('hdrClient');
-  const hdrYear = document.getElementById('hdrYear');
-  const hdrSub = document.getElementById('hdrSub');
-  if(hdrClient && typeof estado.hdrClient === 'string') hdrClient.innerHTML = estado.hdrClient;
-  if(hdrYear && typeof estado.hdrYear === 'string') hdrYear.innerHTML = estado.hdrYear;
-  if(hdrSub && typeof estado.hdrSub === 'string') hdrSub.innerHTML = estado.hdrSub;
+  },{threshold:0.15});
+  document.querySelectorAll('.month-block').forEach(el=>observer.observe(el));
 }
 
-function salvarAlteracoes() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(coletarEstadoAtual()));
-    showToast('Alterações salvas com sucesso!');
-  } catch (err) {
-    console.error(err);
-    showToast('Não foi possível salvar as alterações.');
-  }
-}
-
-function carregarAlteracoes() {
-  try {
-    const bruto = localStorage.getItem(STORAGE_KEY);
-    if (!bruto) return;
-    aplicarEstadoSalvo(JSON.parse(bruto));
-  } catch (err) {
-    console.error(err);
-  }
-}
+document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
 
 // ── Init ──
-carregarAlteracoes();
-buildMonthNav();
-renderAll();
-
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      const id=e.target.id;
-      const idx=parseInt(id.replace('month-',''));
-      document.querySelectorAll('.month-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
-    }
-  });
-},{threshold:0.15});
-document.querySelectorAll('.month-block').forEach(el=>observer.observe(el));
-</script>
-
-
-</body></html>
+(async function initCalendar(){
+  buildMonthNav();
+  const loaded = await loadSiteData();
+  if(!loaded) renderAll();
+  setupMonthObserver();
+})();
+</script></body></html>
